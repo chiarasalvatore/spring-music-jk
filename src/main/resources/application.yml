@@ -40,12 +40,12 @@ spring:
 spring:
   config:
     activate:
+      on-profile: postgres
+  datasource:
     url: 
     driver-class-name: org.postgresql.Driver
     username: 
     password:
-  datasource:
-    driver-class-name: org.postgresql.Driver
   jpa:
     properties:
       hibernate:
