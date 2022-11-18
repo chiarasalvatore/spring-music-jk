@@ -42,7 +42,7 @@ spring:
     activate:
       on-profile: postgres
   datasource:
-    url: 
+    url: "jdbc:postgresql://"
     driver-class-name: org.postgresql.Driver
     username: 
     password:
