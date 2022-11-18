@@ -40,7 +40,10 @@ spring:
 spring:
   config:
     activate:
-      on-profile: postgres
+    url: 
+    driver-class-name: org.postgresql.Driver
+    username: 
+    password:
   datasource:
     driver-class-name: org.postgresql.Driver
   jpa:
