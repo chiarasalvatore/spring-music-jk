@@ -1,10 +1,10 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: spring-music2
+  name: spring-music
   labels:
-    app.kubernetes.io/part-of: spring-music2
-    apps.tanzu.vmware.com/has-tests: "true"
+    app.kubernetes.io/part-of: spring-music
+    #apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
 spec:
   env: 
@@ -18,14 +18,14 @@ spec:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
-  serviceClaims:
-  - name: db
-    ref:
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ResourceClaim
-      name: vac-db-binding-compatible
+  # serviceClaims:
+  # - name: db
+  #   ref:
+  #     apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+  #     kind: ResourceClaim
+  #     name: vac-db-binding-compatible
   source:
     git:
-      url: https://github.com/J-kolaric/spring-music.git
+      url: https://github.com/chiarasalvatore/spring-music-jk.git
       ref:
         branch: master
