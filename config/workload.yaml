@@ -18,12 +18,12 @@ spec:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
-  # serviceClaims:
-  # - name: db
-  #   ref:
-  #     apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-  #     kind: ResourceClaim
-  #     name: vac-db-binding-compatible
+  serviceClaims:
+  - name: db
+    ref:
+      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+      kind: ResourceClaim
+      name: vac-db-binding-compatible
   source:
     git:
       url: https://github.com/chiarasalvatore/spring-music-jk.git
